@@ -17,10 +17,8 @@ end;
 Procedure zna3;
   begin
     h:=(b-a)/n;
-    for var i := 1 to n - 1 do
-    s:=s+func(a+i*h);
+    s:=0+func(a+i*h);
   s:=s*h; //значение интеграла по методу левых прямоугольников
-  p:=f1(b)-f1(a);
     writeln('Приближённое значение=',s:0:5);
     Writeln('Нажмите, чтобы продолжить.');
     readkey;
@@ -82,7 +80,7 @@ begin
     readln(b);
   until (b>=0) and (b>a) and (b<= 5);
   repeat
-    write('Введите число разбиений от 20 до 1000');
+    write('Введите число разбиений от 20 до 1000 n=');
     readln(n);
   until (n>=20) and (n<=1000);
   menuci2;
