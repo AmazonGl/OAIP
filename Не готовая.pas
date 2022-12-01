@@ -1,4 +1,4 @@
-﻿uses Crt;
+uses Crt;
 var a,b,h,s,p:real; n,i:integer;
 function func(x: real): real;
 begin
@@ -27,6 +27,7 @@ Procedure zna3;
   end;
   Procedure zna4;
   begin
+    s:=0;
     h:=(b-a)/n;
     for var i := 1 to n - 1 do
     s:=s+func(a+i*h);
@@ -38,6 +39,7 @@ Procedure zna3;
   end;
   Procedure zna5;
   begin
+    s:=0;
     h:=(b-a)/n;
     for var i := 1 to n - 1 do
     s:=s+func(a+i*h);
@@ -80,7 +82,7 @@ begin
     readln(b);
   until (b>=0) and (b>a) and (b<= 5);
   repeat
-    write('Введите число разбиений от 20 до 1000 n=');
+    write('Введите число разбиений от 20 до 1000');
     readln(n);
   until (n>=20) and (n<=1000);
   menuci2;
